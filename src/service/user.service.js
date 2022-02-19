@@ -18,10 +18,10 @@ export async function validatePassword({ email, password }) {
   const user = await User.findOne({ email })
   if (!user) return false
 
-  const isValid = user.comparePassword(password)
+  const isValid = await user.comparePassword(password)
   if (!isValid) return false
 
-  return omitPassword(user)
+  return omitPassword(user._doc)
 }
 
 export async function findUser(query) {
