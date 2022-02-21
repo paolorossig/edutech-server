@@ -10,7 +10,8 @@ export async function createUser(input) {
     const user = await User.create(input)
     return omitPassword(user._doc)
   } catch (error) {
-    throw new Error(e)
+    const errorMessage = error.code === 11000 ? 'Email ya registrado' : error
+    throw new Error(errorMessage)
   }
 }
 
