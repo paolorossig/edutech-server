@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const Schema = new mongoose.Schema({
+const lessonSchema = new mongoose.Schema({
   id: {
     type: Number,
     required: true,
