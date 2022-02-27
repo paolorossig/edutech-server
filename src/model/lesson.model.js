@@ -19,8 +19,8 @@ const lessonSchema = new mongoose.Schema({
   },
   numberActivities: {
     type: Number
-  }
-  //_course: { type: Schema.ObjectId, ref: 'Course' } PARA DESPUES DE HACER EL MODELO DE CURSO
+  },
+  _course: { type: Schema.ObjectId, ref: 'Course' }
 })
 const Lesson = mongoose.model('Lesson', lessonSchema)
 export default Lesson

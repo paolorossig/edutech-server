@@ -18,7 +18,7 @@ const videoSchema = new mongoose.Schema({
     type: String
   },
   _lesson: { type: Schema.ObjectId, ref: 'Lesson' },
-  //   _course: { type: Schema.ObjectId, ref: 'Course' } PARA DESPUES DE HACER EL MODELO DE CURSO
+  _course: { type: Schema.ObjectId, ref: 'Course' },
   _questions: [{ type: Schema.ObjectId, ref: 'Question' }]
 })
 const Video = mongoose.model('Video', videoSchema)
