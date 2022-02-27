@@ -17,8 +17,7 @@ const questionSchema = new mongoose.Schema({
   url: {
     type: String
   },
-  _lesson: { type: Schema.ObjectId, ref: 'Lesson' }
-  //   _course: { type: Schema.ObjectId, ref: 'Course' } PARA DESPUES DE HACER EL MODELO DE CURSO
+  _comments: [{ type: Schema.ObjectId, ref: 'CommentsVideo' }]
 })
 const Question = mongoose.model('Question', questionSchema)
 export default Question

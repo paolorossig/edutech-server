@@ -12,8 +12,7 @@ const commentsVideoSchema = new mongoose.Schema({
   comment: {
     type: String,
     required: true
-  },
-  _video: { type: Schema.ObjectId, ref: 'Video' }
+  }
   //   _student: { type: Schema.ObjectId, ref: 'Student' }, TODO AFTER MAKE STUDENT MODEL
 })
 const CommentsVideo = mongoose.model('CommentsVideo', commentsVideoSchema)
